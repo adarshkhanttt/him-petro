@@ -192,7 +192,6 @@ header {
     transition: all 0.2s ease;
     display: inline-block;
     cursor: pointer;
-  ;
 }
 
 .btn-primary {
@@ -222,8 +221,20 @@ header {
         padding: 20px 24px;
     }
     
+    .logo {
+        font-size: 16px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
     .header-nav {
-        gap: 20px;
+        gap: 16px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
     }
     
     .home-page {
@@ -232,31 +243,87 @@ header {
     
     .hero-title {
         font-size: 40px;
+        letter-spacing: -1px;
     }
     
     .hero-subtitle {
-        font-size: 18px;
+        font-size: 16px;
+        padding: 0 10px;
     }
     
     .hero-buttons {
         width: 100%;
+        padding: 0 10px;
     }
     
     .btn {
         width: 100%;
+        max-width: 350px;
         text-align: center;
     }
     
     .badge-section {
         bottom: 40px;
+        width: 100%;
+        padding: 0 24px;
+        text-align: center;
+    }
+    
+    .badge-text {
+        font-size: 14px;
+    }
+    
+    /* FIX BLOB POSITIONING ON MOBILE */
+    .blob-inner-container {
+        transform: scale(0.8);  /* Increase scale slightly */
+        min-width: 100%;  /* Remove min-width constraint */
     }
     
     .blob {
-        width: 400px;
-        height: 400px;
+        width: 300px;  /* Smaller blobs */
+        height: 300px;
     }
     
-    .blob-inner-container {
-        transform: scale(0.5);
+    .blob-1 {
+        top: 20%;  /* Reposition to center */
+        left: 50%;
+        transform: translateX(-50%);  /* Center it */
+    }
+    
+    .blob-2 {
+        bottom: 20%;  /* Reposition to center */
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);  /* Center it */
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .btn {
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+    
+    .badge-text {
+        font-size: 14px;
+    }
+    
+    .blob {
+        width: 250px;  /* Even smaller on very small screens */
+        height: 250px;
     }
 }
